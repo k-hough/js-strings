@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <h1>Test</h1>
+
+    <div id="links1"></div>
+    <div id="links2"></div>
+    <div id="img1"></div>
+    <div id="img2"></div>
+
+    <script>
+    "use strict";
+
+    /*Generate the HTML for a link that opens in a separate browser tab. The attribute values of the link should be in double quotes. Generate the link 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.
+
+    Now use arrays each with a handful of elements and loop through the arrays to generate links to multiple pages. Do the same to generate multiple images.*/
+
+    var links = ['http://www.asu.edu', 'http://www.blueridge.edu', 'http://reddit.com'];
+    var titles = ['ASU', 'Blue Ridge', 'Reddit'];
+
+    var answer1 = "";
+
+    for (var i = 0; i < titles.length; i++) {
+        answer1 += '<a href="' + links[i] + '" target="_blank">' + titles[i] + '</a><br/>';
+        console.log(answer1);
+        document.getElementById("links1").innerHTML = answer1;
+    };
+
+    var answer2 = "";
+
+    for (var i = 0; i < titles.length; i++) {
+        answer2 += "<a href=\"" + links[i] + "\" target=\"_blank\">" + titles[i] + "</a><br/>";
+        console.log(answer2);
+        document.getElementById("links2").innerHTML = answer2;
+    };
+
+
+    var images = ['images/homer.jpg', 'images/marge.jpg', 'images/bart.jpg'];
+    var titles = ['Homer', 'Marge', 'Bart'];
+
+    var answer3 = "";
+
+    for (var i = 0; i < titles.length; i++) {
+        answer3 += '<img src="' + images[i] + '" alt="' + titles[i] + '"/><br/>';
+        console.log(answer3);
+        document.getElementById("img1").innerHTML = answer3;
+    };
+
+    var answer4 = "";
+
+    for (var i = 0; i < titles.length; i++) {
+        answer4 += "<img src=\"" + images[i] + "\" alt=\"" + titles[i] + "\"/><br/>";
+        console.log(answer4);
+        document.getElementById("img2").innerHTML = answer4;
+    };
+
+    </script>
+
+</body>
+</html>
