@@ -1,0 +1,28 @@
+<!--Write a function that takes 2 parms, a string and a character. Return a string where the character passed to the function is inserted after the first character of the string. For example, if you pass "testing" and "*" to the function, the function will return "t*esting".-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var mixString = function(str, chr) {
+        var out = str.charAt(0) + chr + str.substring(1);
+        return out;
+    };
+
+    $("output").innerHTML = mixString(prompt("Enter a String"), prompt("Enter a Character"));
+
+    </script>
+
+</body>
+</html>
