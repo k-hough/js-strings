@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <h1>Test</h1>
+
+    <script>
+    "use strict";
+
+    /*Generate the HTML for a link that opens in a separate browser tab. The attribute values of the link should be in double quotes. Generate the link 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.*/
+
+    var answer = '<a href="http://www.asu.edu" target="_blank">' + 'ASU' + '</a>';
+    console.log(answer);
+
+    var answer = "<a href=\"http://www.asu.edu\" target=\"_blank\">" + "ASU" + "</a>";
+    console.log(answer);
+
+    /*Generate the HTML for an image with alternate text. The attribute values of the image should be in double quotes. Generate the image 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.*/
+
+    var answer = '<img src="images/homer.svg" alt="Homer"/>';
+    console.log(answer);
+
+    var answer = "<img src=\"images/homer.svg\" alt=\"Homer\"/>";
+    console.log(answer);
+
+    /*Generate the HTML for multiple links that open in a separate browser tab. The attribute values of the links should be in double quotes. The destinations of the links and the labels for the links should be stored in 1 or 2 arrays. Generate the links 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.*/
+
+    var links = ['http://www.asu.edu'];
+    var titles = ['ASU'];
+
+    var answer = '<a href="' + links[0] + '" target="_blank">' + titles[0] + '</a>';
+    console.log(answer);
+    var answer = "<a href=\"" + links[0] + "\" target=\"_blank\">" + titles[0] + "</a>";
+    console.log(answer);
+
+    /*Generate the HTML for images with alternate text. The attribute values of the images should be in double quotes. The names of the image files and the alternate text for each image should be stored in 1 or 2 arrays. Generate the images 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.*/
+
+    var images = ['images/homer.jpg'];
+    var titles = ['Homer'];
+
+    var answer = '<img src="' + images[0] + '" alt="' + titles[0] + '"/>';
+    console.log(answer);
+
+    var answer = "<img src=\"" + images[0] + "\" alt=\"" + titles[0] + "\"/>";
+    console.log(answer);
+
+    </script>
+
+</body>
+</html>
