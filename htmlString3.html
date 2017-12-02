@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <h1>Test</h1>
+
+    <div id="answer-1"></div>
+    <div id="answer-2"></div>
+
+    <script>
+    "use strict";
+
+    /*Generate the HTML for a link that opens in a separate browser tab. The attribute values of the link should be in double quotes. Generate the link 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.
+
+    Now use arrays each with a handful of elements and loop through the arrays to generate links to multiple pages. Do the same to generate multiple images.
+
+    Then ditch the arrays and generate links to pages of the form folder-xx/page-yy.html where xx is 10 - 14 and yy is 01 - 05. So the first href would be folder-10/page-01.html.
+
+    Do the same with images where each image is of the form images-xx/img-yy.jpg where xx is 55 - 59 and yy is 100 - 104. So the first image would be images-55/img-100.jpg.*/
+
+    var answer1 = '';
+    var answer2 = '';
+    var xx = 55;
+    var yy = 100;
+
+    for (var i = 1; i < 6; i++) {
+        answer1 += '<img src="images-' + xx++ + '/img-' + yy++ + '.jpg" alt="img-' + i + '"><br>';
+    };
+    console.log(answer1);
+    document.getElementById("answer-1").innerHTML = answer1;
+
+
+    for (var x = 6; x < 11; x++) {
+        answer2 += "<img src=\"images-" + xx++ + "/img-" + yy++ + ".jpg\" alt=\"img-" + x + "\"><br>";
+    };
+    console.log(answer2);
+    document.getElementById("answer-2").innerHTML = answer2;
+
+    </script>
+
+</body>
+</html>
