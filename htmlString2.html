@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <h1>Test</h1>
+
+    <div id="answer-1"></div>
+    <div id="answer-2"></div>
+    <div id="answer-3"></div>
+    <div id="answer-4"></div>
+
+    <script>
+    "use strict";
+
+    /*Generate the HTML for a link that opens in a separate browser tab. The attribute values of the link should be in double quotes. Generate the link 2 different ways. First, use double quoted strings with embedded double quotes, then use single quoted strings with embedded double quotes.
+
+    Now use arrays each with a handful of elements and loop through the arrays to generate links to multiple pages. Do the same to generate multiple images.
+
+    Then ditch the arrays and generate links to pages of the form folder-xx/page-yy.html where xx is 10 - 14 and yy is 01 - 05. So the first href would be folder-10/page-01.html.*/
+
+    var answer1 = '';
+    var answer2 = '';
+    var folderNum = 10;
+    var linkNum = 1;
+    var pageNum = 1;
+
+    function pad(n, width, z) {
+      z = z || '0';
+      n = n + '';
+      return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+    }
+
+    for (var i = 0; i < 5; i++) {
+        answer1 += '<a href="folder-' + folderNum++ +'/page-' + pad(pageNum++, 2) + '.html">' + 'Link ' + linkNum++ + '</a><br>';
+
+        //pad(pageNum, 2);
+
+
+    };
+
+    console.log(answer1);
+    document.getElementById("answer-1").innerHTML = answer1;
+
+
+    for (var i = 0; i < 5; i++) {
+        answer2 += "<a href=\"folder-" + folderNum++ + "/page-" + pad(pageNum++, 2) + ".html\">" + "Link " + linkNum++ + "</a><br>";
+    };
+    console.log(answer2);
+    document.getElementById("answer-2").innerHTML = answer2;
+
+    </script>
+
+</body>
+</html>
