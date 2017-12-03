@@ -1,0 +1,32 @@
+<!--Say you have a string stored in str. One way to access the character of that string, for example at index 2, is str.charAt(2). Another way is str[2]. The code str[2] is using "array notation" for a string. Rewrite the reverse function to use array notation instead of charAt.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var stringIndex = function(str) {
+      var strLength = str.length;
+      var strReverse = "";
+        for (var i = strLength - 1; i >= 0; i--) {
+            strReverse += str[i];
+        }
+        return strReverse;
+    };
+
+    $("output").innerHTML = stringIndex(prompt("Enter s String"));
+
+    </script>
+
+</body>
+</html>
