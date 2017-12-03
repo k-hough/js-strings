@@ -1,0 +1,32 @@
+<!--Write a function that takes a string, reverses it, and returns the reversed string. But instead of starting the loop at 0 and incrementing the counter variable, start the loop at a value for you to determine and decrement the counter variable.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var reverseString = function(str) {
+      var strLength = str.length;
+      var strReverse = "";
+        for (var i = strLength - 1; i >= 0; i--) {
+            strReverse += str.charAt(i);
+        }
+        return strReverse;
+    };
+
+    $("output").innerHTML = reverseString(prompt("Enter a String"));
+
+    </script>
+
+</body>
+</html>
